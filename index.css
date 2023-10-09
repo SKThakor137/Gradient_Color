@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.6);
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.gradient-box {
+  width: 225px;
+  height: 250px;
+  margin: 10px;
+  border-radius: 10px;
+  background: linear-gradient(to right, red, blue);
+  transition: background 0.5s ease-in-out;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0px 130px;
+}
+
+h2 {
+  text-align: center;
+}
+
+button {
+  background-color: #0026b3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  position: fixed;
+  top: 50%;
+  left: -1%;
+  rotate: -90deg;
+}
+button:hover {
+  background: #002edb;
+}
+
+.copied-message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  color: white;
+  display: none;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .gradient-box {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .gradient-box {
+    width: 100%;
+  }
+}
